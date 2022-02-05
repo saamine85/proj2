@@ -1,0 +1,119 @@
+/* start variable */
+:root {
+  --main-color: #19c8fa;
+}
+/* end variable */
+
+/* start global rules */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  /*temporaire background*/
+  background-color: black;
+}
+ul {
+  list-style: none;
+}
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* meadia querries */
+/* small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* medium */
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* large */
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* end global rules */
+/* start header */
+
+header {
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+header .container::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  background-color: #a2a2a2;
+  bottom: 0px;
+  width: calc(100% - 30px);
+  /* left: 15px; */
+}
+
+header .logo img {
+  height: 40px;
+}
+header nav {
+  /* ceci veut dire que tt le nav prend tout lespace qui rest */
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+header nav ul {
+  display: flex;
+}
+header nav ul li a {
+  text-decoration: none;
+  display: block;
+  color: white;
+  font-size: 14px;
+  transition: 0.3s;
+  padding: 40px 10px;
+}
+header nav ul li a.active,
+header nav ul li a:hover {
+  color: var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+  position: relative;
+  z-index: 1;
+}
+header nav .form {
+  width: 40px;
+  height: 30px;
+  position: relative;
+  margin-left: 60px;
+  border-left: 1px solid white;
+}
+header nav .form i {
+  color: white;
+  position: absolute;
+  font-size: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+}
+/* end header */
