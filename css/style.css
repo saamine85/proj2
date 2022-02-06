@@ -587,23 +587,143 @@ header nav .form i {
     flex-basis: 25%;
   }
 }
-.stats .container .box i{
-width: 40px;
-height: 40px;
-display: flex;
-background-color: #333;
-justify-content: center;
-align-items: center;
-border-radius:50%;
-margin: 0 auto 30px;
-
+.stats .container .box i {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  background-color: #333;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin: 0 auto 30px;
 }
-.stats .container .box .number{
-font-size: 50px;
-font-weight: bold;
-margin: 0 0 20px;
+.stats .container .box .number {
+  font-size: 50px;
+  font-weight: bold;
+  margin: 0 0 20px;
 }
-.stats .container .box p{
-font-size: 14px;
+.stats .container .box p {
+  font-size: 14px;
 }
 /* end stat */
+
+/* start our skills testimonials */
+.our-skills {
+  padding-top: var(--section-padd);
+  padding-bottom: var(--section-padd);
+}
+.our-skills .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media (min-width: 992px) {
+  .our-skills .container > div {
+    flex-basis: 45%;
+  }
+}
+.our-skills .container > div > h3 {
+  margin: 0 0 30px;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+}
+.our-skills .container > div > p {
+  color: #777;
+  line-height: 2;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.our-skills .testimonials .content {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+}
+.our-skills .testimonials .content img {
+  width: 100px; /* si tu ramene une image de la meme proportion juste le width suffit pour la redimensionner*/
+  border-radius: 50%;
+  margin-right: 50px;
+}
+@media (max-width: 767px) {
+  .our-skills .testimonials .content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .our-skills .testimonials .content img {
+    margin: 0 auto 20px;
+  }
+  .our-skills .testimonials .text p {
+    text-align: center !important;
+  }
+}
+.our-skills .testimonials .text {
+  line-height: 1.8;
+  border-bottom: 1px solid #ccc;
+}
+.our-skills .testimonials .text p {
+  color: #777;
+  text-align: right;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.our-skills .testimonials .bullets {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.our-skills .testimonials .bullets li {
+  width: 14px;
+  height: 14px;
+  border: 1px solid #aaa;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.our-skills .testimonials .bullets li.active {
+  background-color: var(--main-color);
+  border-color: var(--main-color);
+}
+/* end  our skills testimonials  */
+
+/* start  our skills skills  */
+.our-skills .skills .prog-holder {
+  margin-bottom: 40px;
+}
+.our-skills .skills .prog-holder h4 {
+  text-transform: uppercase;
+  font-weight: normal;
+  margin-bottom: 15px;
+}
+.our-skills .skills .prog-holder .prog {
+  background-color: #dedadc;
+  height: 30px;
+}
+.our-skills .skills .prog-holder .prog span {
+  display: block;
+  background-color: var(--main-color);
+  height: 100%;
+  position: relative;
+}
+.our-skills .skills .prog-holder .prog span::before {
+  content: attr(data-progress);
+  position: absolute;
+  background-color: #333;
+  color: #fff;
+  top: -40px;
+  right: -15px;
+  padding: 4px 0;
+  width: 40px;
+  text-align: center;
+  border-radius: 4px;
+}
+.our-skills .skills .prog-holder .prog span::after {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-width: 8px;
+  border-color: #333 transparent transparent transparent;
+  top: -15px;
+  right: -8px;
+}
+
+/* end  our skills skills  */
